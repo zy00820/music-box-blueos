@@ -327,6 +327,7 @@
 <script>
 import player from '../../js/player.js'
 import { formatTime, getNewSongs } from '../../js/musicApi.js'
+import auth from '../../js/auth.js'
 import router from '@blueos.app.appmanager.router'
 
 export default {
@@ -347,6 +348,11 @@ export default {
   },
 
   onInit() {
+    auth.initAuth()
+    if (!auth.isActivated()) {
+      router.replace({ uri: '/pages/Activate' })
+      return
+    }
     this.bindPlayerEvents()
   },
 
