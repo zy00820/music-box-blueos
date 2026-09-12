@@ -2,17 +2,27 @@
   "package": "com.musicbox.app",
   "name": "音乐盒",
   "icon": "/assets/images/icon.jpg",
-  "versionName": "1.1.1",
-  "versionCode": 3,
+  "versionName": "1.2.0",
+  "versionCode": 4,
   "config": {
     "designWidth": 432
   },
-  "deviceTypeList": ["watch-square"],
-  "appCategory": ["music"],
+  "deviceTypeList": [
+    "watch-square"
+  ],
+  "appCategory": [
+    "music"
+  ],
   "features": [
-    { "name": "blueos.network.fetch" },
-    { "name": "blueos.media.audio.mediaManager" },
-    { "name": "blueos.storage.kv" }
+    {
+      "name": "blueos.network.fetch"
+    },
+    {
+      "name": "blueos.media.audio.mediaManager"
+    },
+    {
+      "name": "blueos.storage.kv"
+    }
   ],
   "permissions": [],
   "router": {
@@ -31,6 +41,9 @@
         "component": "index"
       },
       "pages/Lyric": {
+        "component": "index"
+      },
+      "pages/About": {
         "component": "index"
       }
     }
